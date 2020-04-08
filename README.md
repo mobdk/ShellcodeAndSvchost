@@ -120,7 +120,7 @@ string scode =
                 else if (scode.Substring(pos, 1) == "?") { if (scode.Substring(pos - 1, 1) == "?" || scode.Substring(pos - 1, 1) == "-")
                 {
 
-                  data[0] = Byte.Parse( strnum ); Console.WriteLine( data[0] );
+                  data[0] = Byte.Parse( strnum ); 
                   result = WriteProcessMemory(ProcHandle, allocMemAddress, data, 1, out bytesWritten);
                   allocMemAddress = allocMemAddress + 1;
                   strnum = "";
@@ -130,7 +130,7 @@ string scode =
 
                 else {
 
-                  data[0] = Byte.Parse( strnum + num.ToString() ); Console.WriteLine( data[0] );
+                  data[0] = Byte.Parse( strnum + num.ToString() ); 
                   result = WriteProcessMemory(ProcHandle, allocMemAddress, data, 1, out bytesWritten);
                   allocMemAddress = allocMemAddress + 1;
                   strnum = "";
